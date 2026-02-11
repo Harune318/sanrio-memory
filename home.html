@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="app-container">
+
+  <!-- 上部 -->
+  <header class="top-bar">
+    <div class="icon">🔔</div>
+    <div class="title">サンリオメモリー</div>
+    <div class="icon">⚙</div>
+  </header>
+
+  <!-- 中央表示 -->
+  <main id="content" class="content"></main>
+
+  <!-- 下部ナビ -->
+  <nav class="bottom-nav">
+    <button onclick="showTab('chat', this)">チャット</button>
+    <button onclick="showTab('photo', this)">デイリーフォト</button>
+    <button onclick="showTab('share', this)">写真共有</button>
+    <button onclick="showTab('gift', this)">贈り物</button>
+    <button onclick="showTab('profile', this)">プロフィール</button>
+  </nav>
+
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

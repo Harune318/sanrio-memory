@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<img src="images/B05-1.png" style="width:100%">
+<img src="images/B05-2.png" style="width:100%">
+
+<input type="file" accept="image/*" id="upload" style="display:none">
+
+<script>
+document.querySelectorAll("img").forEach(img => {
+  img.onclick = () => {
+    document.getElementById("upload").click();
+  };
+});
+
+document.getElementById("upload").onchange = function(e){
+  const reader = new FileReader();
+  reader.onload = function(ev){
+    document.querySelectorAll("img")[1].src = ev.target.result;
+  };
+  reader.readAsDataURL(e.target.files[0]);
+};
+</script>
+
+</body>
+</html>
